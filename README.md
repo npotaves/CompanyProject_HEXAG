@@ -33,15 +33,23 @@ Se debe tener instalado postgreSQL
 
 |          cuit | companyName |                                                                                                                                              
 | -------------:|:-----------:|
-|     requerido |   requerido |                                                                 
+|     requerido |   requerido |   
+
+
 Ej:
+
+
 ```
 [{
     "cuit":"46666669999",
     "companyName":"Empresa de Prueba 1"
 }]
 ```
+
+
     RESPUESTA:
+
+    
 ```
 [{
     "idCompany": 1,
@@ -52,11 +60,15 @@ Ej:
 
 ```
 
+
+
 - **GET /company/subscribed-last-month
   
     Endpoint que lista todas las empresas que se suscribieron el último mes. Este reporte permite conocer por ej, de consumirlo el 28/2/2025,listará todas las empresas que se suscribieron durante todo el mes completo de enero (1 al 31/1/25 por ej)
 
    RESPUESTA:
+
+  
 ```
 [{
         "idCompany": 1,
@@ -72,11 +84,15 @@ Ej:
     }]
 ```
 
+
 - **GET /company/transaction-last-month
   
    Endpoint que lista todas las empresas que realizaron transacciones el ultimo mes. Este reporte permite conocer por ej, de consumirlo el 28/2/2025,listará todas las empresas que possen transacciones durante todo el mes completo de enero (1 al 31/1/25 por ej)
 
+
   RESPUESTA:
+
+  
 ```
 {[
     {
@@ -93,15 +109,20 @@ Ej:
     }
 ]}
 ```
+
+
 ## Setear Entorno
 
 - Setear Variables de entorno:
+  
   
 ```
   DATABASE_URL=;
   DB_USER=;
   DB_PASSWORD=;
 ```
+
+
 
 ## Tools
 
