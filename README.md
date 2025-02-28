@@ -40,24 +40,23 @@ Ej:
 
 
 ```
-[{
+{
     "cuit":"46666669999",
     "companyName":"Empresa de Prueba 1"
-}]
+}
 ```
 
 
     **RESPUESTA**
 
 
-      
 ```
-[{
+{
     "idCompany": 1,
     "cuit": "46666669999",
     "companyName": "Empresa de Prueba 1",
     "subscriptionDate": "2025-02-28T17:56:02.6245501"
-}]
+}
 
 ```
 
@@ -71,7 +70,7 @@ Ej:
 
   
 ```
-[{
+{
         "idCompany": 1,
         "cuit": "46666669999",
         "companyName": "Empresa de Prueba 1",
@@ -82,7 +81,7 @@ Ej:
         "cuit": "12345678991",
         "companyName": "Empresa de Prueba 1",
         "subscriptionDate": "2025-01-28T17:56:02.62455"
-    }]
+    }
 ```
 
 
@@ -95,7 +94,7 @@ Ej:
 
   
 ```
-{[
+{
     {
         "idCompany": 1,
         "cuit": "46666669999",
@@ -108,7 +107,7 @@ Ej:
         "companyName": "Empresa de Prueba 1",
         "subscriptionDate": "2025-01-28T17:56:02.62455"
     }
-]}
+}
 ```
 
 
