@@ -46,8 +46,7 @@ Ej:
 }
 ```
 
-
-    **RESPUESTA**
+  REPSUESTA
 
 
 ```
