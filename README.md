@@ -29,11 +29,12 @@ Se debe tener instalado postgreSQL
   
     Endpoint que realiza el alta de subscripción de una empresa.
 
-**REQUEST Ej**
-```
+**REQUEST**
+
 |          cuit | companyName |                                                                                                                                              
 | -------------:|:-----------:|
 |     requerido |   requerido |                                                                 
+Ej:
 ```
 [{
     "cuit":"46666669999",
@@ -42,14 +43,12 @@ Se debe tener instalado postgreSQL
 ```
     RESPUESTA:
 ```
-[
-{
+[{
     "idCompany": 1,
     "cuit": "46666669999",
     "companyName": "Empresa de Prueba 1",
     "subscriptionDate": "2025-02-28T17:56:02.6245501"
-}
-]
+}]
 
 ```
 
@@ -59,8 +58,7 @@ Se debe tener instalado postgreSQL
 
    RESPUESTA:
 ```
-[
-    {
+[{
         "idCompany": 1,
         "cuit": "46666669999",
         "companyName": "Empresa de Prueba 1",
@@ -71,8 +69,7 @@ Se debe tener instalado postgreSQL
         "cuit": "12345678991",
         "companyName": "Empresa de Prueba 1",
         "subscriptionDate": "2025-01-28T17:56:02.62455"
-    }
-]
+    }]
 ```
 
 - **GET /company/transaction-last-month
@@ -81,8 +78,7 @@ Se debe tener instalado postgreSQL
 
   RESPUESTA:
 ```
-{
-[
+{[
     {
         "idCompany": 1,
         "cuit": "46666669999",
@@ -95,20 +91,17 @@ Se debe tener instalado postgreSQL
         "companyName": "Empresa de Prueba 1",
         "subscriptionDate": "2025-01-28T17:56:02.62455"
     }
-]
-}
+]}
 ```
 ## Setear Entorno
 
 - Setear Variables de entorno:
   
-  ```
-
+```
   DATABASE_URL=;
   DB_USER=;
   DB_PASSWORD=;
-  
-  ```
+```
 
 ## Tools
 
