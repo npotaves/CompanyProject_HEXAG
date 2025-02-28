@@ -19,8 +19,7 @@ Se debe tener instalado postgreSQL
 
 - Clonar proyecto
 - Setear variables de entorno
-- Ejecutar "maven clean"
-- Ejecutar "maven build"
+- Ejecutar "mvn clean install"
 - finalmente "run"
 - Poblado inicial de datos (si se desea) script en resources/data.sql
 
