@@ -10,8 +10,8 @@ Contenido:
 ## Versiones
 
 | Spring Boot | Java | PostgreSQL |
-|---|---|---|
-|  3.4.3 | 21 | 12 |
+|-------------|------|------------|
+|  3.4.3      |  21  |     12     |
 
 ## Correr Proyecto
 
@@ -25,21 +25,21 @@ Se debe tener instalado postgreSQL
 
 ## Endpoints
 
-- **POST /company**
+- **POST /company
   
-    Endpoint que realiza el alta de una subscripción de una empresa.
- REQUEST :
+    Endpoint que realiza el alta de subscripción de una empresa.
+
+**REQUEST Ej**
 ```
-**Parámetros**
-
-|          cuit | companyName |                                                                                                                                                                 |
-| -------------:|:--------:|
-|     requerido | requerido |                                                                 
-
+|          cuit | companyName |                                                                                                                                              
+| -------------:|:-----------:|
+|     requerido |   requerido |                                                                 
+```
 [{
     "cuit":"46666669999",
     "companyName":"Empresa de Prueba 1"
 }]
+```
     RESPUESTA:
 ```
 [
@@ -55,7 +55,7 @@ Se debe tener instalado postgreSQL
 
 - **GET /company/subscribed-last-month
   
-    Endpoint que lista todas las empresas que se suscribieron el ultimo mes. Este reporte permite conocer por ej, de consumirlo el 28/2/2025,listará todas las empresas que se suscribieron durante todo el mes completo de enero (1 al 31/1/25 por ej)
+    Endpoint que lista todas las empresas que se suscribieron el último mes. Este reporte permite conocer por ej, de consumirlo el 28/2/2025,listará todas las empresas que se suscribieron durante todo el mes completo de enero (1 al 31/1/25 por ej)
 
    RESPUESTA:
 ```
@@ -103,13 +103,14 @@ Se debe tener instalado postgreSQL
 - Setear Variables de entorno:
   
   ```
+
   DATABASE_URL=;
   DB_USER=;
   DB_PASSWORD=;
+  
   ```
 
 ## Tools
-
 
 - Java 21
 - Spring boot 3.4.3 
