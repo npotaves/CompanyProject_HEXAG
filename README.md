@@ -47,9 +47,10 @@ Ej:
 ```
 
 
-    RESPUESTA:
+    **RESPUESTA**
 
-    
+
+      
 ```
 [{
     "idCompany": 1,
@@ -66,7 +67,7 @@ Ej:
   
     Endpoint que lista todas las empresas que se suscribieron el último mes. Este reporte permite conocer por ej, de consumirlo el 28/2/2025,listará todas las empresas que se suscribieron durante todo el mes completo de enero (1 al 31/1/25 por ej)
 
-   RESPUESTA:
+  **RESPUESTA**
 
   
 ```
