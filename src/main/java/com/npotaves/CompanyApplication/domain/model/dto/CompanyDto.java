@@ -27,6 +27,16 @@ public class CompanyDto {
     @JsonProperty("subscriptionDate")
     private LocalDateTime subscriptionDate;
 
+    public CompanyDto(Long idCompany, String cuit, String companyName, LocalDateTime subscriptionDate) {
+        this.idCompany = idCompany;
+        this.cuit = cuit;
+        this.companyName = companyName;
+        this.subscriptionDate = subscriptionDate;
+    }
+
+    public CompanyDto() {
+    }
+
     public void setIdCompany(Long idCompany) {
         this.idCompany = idCompany;
     }
@@ -41,5 +51,21 @@ public class CompanyDto {
 
     public void setSubscriptionDate(LocalDateTime subscriptionDate) {
         this.subscriptionDate = subscriptionDate;
+    }
+
+    public Long getIdCompany() {
+        return idCompany;
+    }
+
+    public String getCuit() {
+        return cuit;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public LocalDateTime getSubscriptionDate() {
+        return subscriptionDate;
     }
 }
