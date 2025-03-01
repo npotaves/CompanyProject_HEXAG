@@ -77,5 +77,16 @@ public class CompanyEntity {
     public void setSubscriptionDate(LocalDateTime subscriptionDate) {
         this.subscriptionDate = subscriptionDate;
     }
+
+    public CompanyEntity() {
+    }
+
+    public CompanyEntity(Long idCompany, String cuit, String companyName, LocalDateTime subscriptionDate, List<TransactionEntity> transactions) {
+        this.idCompany = idCompany;
+        this.cuit = cuit;
+        this.companyName = companyName;
+        this.subscriptionDate = subscriptionDate;
+        this.transactions = transactions;
+    }
 }
 

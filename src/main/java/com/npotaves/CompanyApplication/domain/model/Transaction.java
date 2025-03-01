@@ -24,6 +24,19 @@ public class Transaction {
     @JsonIgnore
     private Company company;
 
+    public Transaction(Long idTransaction, String cuentaCredito, String cuentaDebito, BigDecimal importe, LocalDateTime transactionDate, Company company) {
+        this.idTransaction = idTransaction;
+        this.cuentaCredito = cuentaCredito;
+        this.cuentaDebito = cuentaDebito;
+        this.importe = importe;
+        this.transactionDate = transactionDate;
+        this.company = company;
+    }
+
+    public Transaction() {
+
+    }
+
     public Long getIdTransaction() {
         return idTransaction;
     }

@@ -1,9 +1,8 @@
 package com.npotaves.CompanyApplication.domain.model.dto.request;
 
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Pattern;
+import com.npotaves.CompanyApplication.domain.validation.ValidCuit;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,13 +15,13 @@ import lombok.Setter;
 @Setter
 public class CompanyRequest {
 
-    @NotBlank(message = "El CUIT es obligatorio")
-    @NotEmpty(message = "El CUIT es obligatorio")
-    @Pattern(regexp = "\\d{11}", message = "El CUIT debe tener 11 dígitos numéricos")
+    //@NotBlank(message = "El CUIT es obligatorio")
+    //@Pattern(regexp = "^\\d{11}$", message = "El CUIT debe tener 11 dígitos numéricos")
+    @ValidCuit
     private String cuit;
     @NotBlank(message = "La razón social es obligatoria")
-    @NotEmpty(message = "La razón social es obligatoria")
     private String companyName;
+
 
     public String getCuit() {
         return cuit;

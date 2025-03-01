@@ -20,6 +20,17 @@ public class Company {
     private LocalDateTime subscriptionDate;
     private List<Transaction> transactions;
 
+    public Company(Long idCompany, String cuit, String companyName, LocalDateTime subscriptionDate, List<Transaction> transactions) {
+        this.idCompany = idCompany;
+        this.cuit = cuit;
+        this.companyName = companyName;
+        this.subscriptionDate = subscriptionDate;
+        this.transactions = transactions;
+    }
+
+    public Company() {}
+
+
     public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }

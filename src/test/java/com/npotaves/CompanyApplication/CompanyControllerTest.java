@@ -1,4 +1,4 @@
-package com.npotaves.CompanyApplication.controller;
+package com.npotaves.CompanyApplication;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.npotaves.CompanyApplication.application.usecases.CompanyService;
 import com.npotaves.CompanyApplication.domain.model.dto.CompanyDto;
@@ -12,6 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class CompanyControllerTest {
 
 
     @Test
-    void createCompany() throws Exception {
+    void shouldCreateCompanyOk() throws Exception {
         CompanyRequest request = new CompanyRequest();
         request.setCompanyName("Test Company");
         request.setCuit("22234567889");
@@ -52,7 +53,7 @@ public class CompanyControllerTest {
     }
 
     @Test
-    void createCompany_InvalidRequest() throws Exception {
+    void shouldCreateCompany_InvalidRequest() throws Exception {
         CompanyRequest request = new CompanyRequest();
 
         mockMvc.perform(MockMvcRequestBuilders.post("/company")
@@ -62,7 +63,7 @@ public class CompanyControllerTest {
     }
 
     @Test
-    void getTransactionLastMonth_WithResults() throws Exception {
+    void shouldReturnTransactionLastMonth_WithResults() throws Exception {
         List<CompanyDto> companies = List.of(new CompanyDto());
         when(companyService.getTransactionLastMonth()).thenReturn(companies);
 
@@ -74,13 +75,35 @@ public class CompanyControllerTest {
     }
 
     @Test
-    void getTransactionLastMonth_EmptyList() throws Exception {
+    void shouldReturnTransactionLastMonth_EmptyList() throws Exception {
         when(companyService.getTransactionLastMonth()).thenReturn(Collections.emptyList());
 
         mockMvc.perform(MockMvcRequestBuilders.get("/company/transaction-last-month"))
                 .andExpect(status().isNoContent());
 
         verify(companyService, times(1)).getTransactionLastMonth();
+    }
+
+    @Test
+    void shouldReturnSubscribedLastMonth_WithResults() throws Exception {
+        List<CompanyDto> companies = List.of(new CompanyDto(1L, "Test Company", "22234567889", LocalDateTime.now()));
+        when(companyService.getSubscribedLastMonth()).thenReturn(companies);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/company/subscribed-last-month"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(companies.size()));
+
+        verify(companyService, times(1)).getSubscribedLastMonth();
+    }
+
+    @Test
+    void shouldReturnSubscribedLastMonth_EmptyList() throws Exception {
+        when(companyService.getSubscribedLastMonth()).thenReturn(Collections.emptyList());
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/company/subscribed-last-month"))
+                .andExpect(status().isNoContent());
+
+        verify(companyService, times(1)).getSubscribedLastMonth();
     }
 }
 
