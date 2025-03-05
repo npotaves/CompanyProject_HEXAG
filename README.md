@@ -21,7 +21,7 @@ Se debe tener instalado postgreSQL
 - Setear variables de entorno
 - Ejecutar "mvn clean install"
 - finalmente "run"
-- Poblado inicial de datos (si se desea) script en resources/data.sql
+- Poblado inicial de datos (script en resources/data.sql) mas que nada para poder visualizar resultados en lo que es reportes, que son a mes vencido.
 
 ## Endpoints
 
